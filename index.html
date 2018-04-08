@@ -3,8 +3,6 @@
 <head>
 <meta charset="UTF-8">
 <title>Analyzer</title>
-<script src="uploading.js"></script>
-<script src="my-app.mjs"></script>
 <link rel="stylesheet" href="styles.css">
 <link href="https://transloadit.edgly.net/releases/uppy/v0.23.3/dist/uppy.min.css" rel="stylesheet">
 <script src="https://transloadit.edgly.net/releases/uppy/v0.23.3/dist/uppy.min.js"></script>
@@ -97,10 +95,10 @@
                         jumplink = document.getElementById('btn');
                 jumplink.addEventListener("click", function(event){
                         event.preventDefault();
-                        myvideo.play();
-                        myvideo.pause();
+                        // myvideo.play();
+                        // myvideo.pause();
                         myvideo.currentTime = parseInt(values[i]);
-                        myvideo.play();
+                        // myvideo.play();
                         i=(i+1)%values.length;
                 }, false);
                 
