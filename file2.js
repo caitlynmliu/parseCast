@@ -1,0 +1,30 @@
+export default function dictionary105() {
+    return file2 = ({
+    "in": ["0", "9"],
+        "order": ["0"],
+        "to": ["0"],
+        "describe": ["0"],
+        "this": ["0", "15"],
+        "graph": ["1"],
+        "the": ["1", "8", "9"],
+        "state": ["2"],
+        "diagram": ["2"],
+        "we": ["2"],
+        "can": ["3"],
+        "equivalently": ["3"],
+        "specify": ["4"],
+        "these": ["6", "13"],
+        "parameters": ["7", "8"],
+        "so": ["7"],
+        "formal": ["9"],
+        "definition": ["9"],
+        "of": ["10", "15"],
+        "a": ["11"],
+        "finite": ["11"],
+        "automaton": ["12"],
+        "are": ["12"],
+        "five": ["13"],
+        "components": ["14"],
+        "possible": ["16"]
+    });
+}

@@ -1,5 +1,7 @@
 body{
     text-align: center;
+    background-color: #F4F2F5;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 }
 
 div.video-wrapper{
@@ -11,6 +13,7 @@ div.video-wrapper{
 
 video.video-player{
     width: 100%;
+    border-radius: 8px;
 }
 
 .button-wrapper{
@@ -35,16 +38,42 @@ video.video-player{
     background-image: linear-gradient(to bottom, #3498db, #2980b9);
     -webkit-border-radius: 28;
     -moz-border-radius: 28;
-    border-radius: 28px;
-    font-family: Arial;
+    border-radius: 20px;
     color: #ffffff;
     font-size: 12px;
-    margin-left: 100px;
+    margin-left: 250px;
     padding: 10px 20px 10px 20px;
     text-decoration: none;
   }
   
 #btn:hover {
+    background: #3cb0fd;
+    background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+    text-decoration: none;
+}
+
+#btn2 {
+    background: #3498db;
+    background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+    background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+    background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+    background-image: -o-linear-gradient(top, #3498db, #2980b9);
+    background-image: linear-gradient(to bottom, #3498db, #2980b9);
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 20px;
+    color: #ffffff;
+    font-size: 12px;
+    margin-left: 20px;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+  }
+  
+#btn2:hover {
     background: #3cb0fd;
     background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
     background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
@@ -61,6 +90,7 @@ video.video-player{
 
 #frm1{
     margin: 15px;
+    margin-right: 15%;
 }
 
 #vid-form label {
@@ -72,7 +102,7 @@ video.video-player{
     padding: 0 4px 0 0;
 }
 #vid-form span input {
-    width: 80%;
+    width: 70%;
 }
 
 .App {
@@ -83,9 +113,14 @@ video.video-player{
     animation: App-logo-spin infinite 20s linear;
     height: 80px;
   }
-  
+
+  @keyframes App-logo-spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
   .App-header {
-    background-color: #222;
+    background-color:#3b5eba;
     height: 150px;
     padding: 20px;
     color: white;
