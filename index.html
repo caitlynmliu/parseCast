@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Analyzer</title>
+<script src="uploading.js"></script>
+<script src="my-app.mjs"></script>
+<link rel="stylesheet" href="styles.css">
+<link href="https://transloadit.edgly.net/releases/uppy/v0.23.3/dist/uppy.min.css" rel="stylesheet">
+<script src="https://transloadit.edgly.net/releases/uppy/v0.23.3/dist/uppy.min.js"></script>
+</head>
+
+<body>
+    <form id="vid-form">
+            <div>
+                    <label>Please insert a video url: </label><br>
+                    <span><input type="text" id="user-input" value=""></span>
+                    <input  type="button" id="urlbut" onclick="submitUrl()" value="Submit">
+            </div>
+    </form>
+    <div class= "video-wrapper">
+        <video id="vid" class="video-player" controls>
+            <source id="vid-url" src="http://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+        </video>
+    </div>
+    <script>
+            function submitUrl(){
+                var siteHeader = document.getElementById('vid-url');
+                siteHeader.setAttribute("src", document.getElementById("user-input").value);
+                document.getElementById("vid").load();
+            }
+    </script>
+    
+    <form id="frm1">
+        Keyword: <input type="text" id="fname" value="">
+        <input type="button" onclick="myFunction()" value="Submit"> 
+        <button id="btn">
+                Next instance
+        </button>
+    </form>
+    <div class="button-wrapper">
+           
+        </div>
+    <script>
+        function myFunction(){
+            var query = document.getElementById("fname").value;
+            var result = false;
+            const test = { "how": [ "0", "6" ], 
+                "long": [ "1", "6" ], 
+                "is": [ "1", "6", "14" ], 
+                "a": [ "2", "4", "5" ], 
+                "day": [ "2", "5" ], 
+                "on": [ "2", "9", "11", "14" ], 
+                "the": [ "2", "7", "9", "12" ], 
+                "Sun": [ "2" ], 
+                "at": [ "3" ], 
+                "first": [ "3" ], 
+                "might": [ "4" ], 
+                "seem": [ "4" ], 
+                "like": [ "4" ], 
+                "stupid": [ "4" ], 
+                "question": [ "5" ], 
+                "it": [ "6" ], 
+                "takes": [ "6" ], 
+                "sun": [ "7", "9", "12" ], 
+                "to": [ "7" ], 
+                "come": [ "7" ], 
+                "back": [ "7" ], 
+                "over": [ "7" ], 
+                "head": [ "8" ], 
+                "doesn't": [ "8" ], 
+                "happen": [ "8" ], 
+                "unless": [ "9" ], 
+                "you're": [ "9" ], 
+                "standing": [ "10" ], 
+                "upside": [ "10" ], 
+                "down": [ "10" ], 
+                "and": [ "10", "13" ], 
+                "in": [ "11" ], 
+                "which": [ "11" ], 
+                "case": [ "11" ], 
+                "days": [ "11" ], 
+                "are": [ "12" ], 
+                "you": [ "12" ], 
+                "intentionally": [ "12" ], 
+                "short": [ "13" ], 
+                "your": [ "14" ], 
+                "hair": [ "14" ], 
+                "fire": [ "14" ] 
+            };
+            values = test[query];
+            if (values == undefined) alert("Your keyword "+ query + " was not found. Try again.");
+            else{
+                console.log(values);
+                var i = 0;
+                var myvideo = document.getElementById('vid'),
+                        jumplink = document.getElementById('btn');
+                jumplink.addEventListener("click", function(event){
+                        event.preventDefault();
+                        myvideo.play();
+                        myvideo.pause();
+                        myvideo.currentTime = parseInt(values[i]);
+                        myvideo.play();
+                        i=(i+1)%values.length;
+                }, false);
+                
+            };
+        }  
+             
+    </script>
+  
+    
+</body>
+
+</html>
